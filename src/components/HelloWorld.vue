@@ -313,6 +313,7 @@
                         // JSON responses are automatically parsed.
                         console.log(response.data);
                         this.times = response.data;
+                        localStorage.times = JSON.stringify(response.data);
                         this.showSnack("Loaded data from cloud");
                     })
                     .catch(e => {
