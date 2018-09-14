@@ -125,15 +125,16 @@
                     },
                     {
                         text: 'Time Stopped',
-                        sortable: true,
+                        sortable: false,
                         value: 'stopped'
                     },
                     {
                         text: 'Hours (Decimal)',
-                        sortable: true,
+                        sortable: false,
                         value: 'difference'
                     }, {
                     text: "Actions",
+                        sortable: false,
                     }
                 ],
                 times: [],
@@ -247,10 +248,9 @@
                 }
 
                 var lastitem = this.times[0];
-                lastitem.started = lastitem.started;
 
                 lastitem.stopped = moment();
-                this.times[this.times.length-1] = lastitem;
+                this.times[0] = lastitem;
 
                 lastitem.difference = lastitem.stopped.diff(lastitem.started, "seconds")
                 this.saveLocalStorage();
