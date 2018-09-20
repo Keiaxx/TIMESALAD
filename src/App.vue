@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import HelloWorld from './components/TimeTable'
 
 export default {
   name: 'App',
